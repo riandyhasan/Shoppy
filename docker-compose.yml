@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  shoppy:
+    container_name: shoppy
+    build:
+      dockerfile: dockerfile
+      context: ./
+    ports:
+      - 8080:8080
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+
+volumes:
+  data:
