@@ -16,5 +16,10 @@ func main() {
 	// Routes
 	routes.UserRoute(app)
 
+	// Protected routes
+	routes.ProductRoute(app)
+	routes.CartRoute(app)
+	// routes.TransactionRoute(app)
+
 	app.Listen(":8080")
 }
